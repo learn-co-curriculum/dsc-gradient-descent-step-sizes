@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In the last section, we took a first look at the process for improving regression lines.  We began with some data then used a simple regression line in the form $\hat{y}= mx + b $ to predict an output, given an input.  Finally, we measured the accuracy of our regression line by calculating the differences between the outputs predicted by the regression line and the actual values. In this lesson, we'll look at how we can make our approach more efficient.
+In the last section, you took a first look at the process for improving regression lines.  You began with some data then used a simple regression line in the form $\hat{y}= mx + b $ to predict an output, given an input.  Finally, you measured the accuracy of your regression line by calculating the differences between the outputs predicted by the regression line and the actual values. In this lesson, you'll look at how we can make your approach more efficient.
 
 ## Objectives
 
@@ -79,7 +79,7 @@ So far, we have held one variable, the y-intercept, constant in order to experim
 
 ![](./images/gradientdescent.png)
 
-As we can see, exploring both variables, the slope and the y-intercept, requires plotting the second variable along the horizontal axis and turning our graph into a three-dimensional representation.  And in the future we'll be able to change more than just that.  
+As we can see, exploring both variables (the slope and the y-intercept) requires plotting the second variable along the horizontal axis and turning our graph into a three-dimensional representation.  And in the future, we'll be able to change more than just that.  
 
 Furthermore, because we need to explore multiple variables in our regression lines, we are forced to rule out some approaches that are more computationally expensive, or simply not possible.
 
@@ -110,7 +110,7 @@ Rather than arbitrarily changing our variables, as we have done by decrementing 
 
 ### Our approach
 
-We don't want to adjust the slope value $m$ or another variable and hope that the RSS decreased.  Doing so is like trying to fly plane just by sitting down and pressing buttons.  
+We don't want to adjust the slope value $m$ or another variable and hope that the RSS decreased.  Doing so is like trying to fly a plane just by sitting down and pressing buttons.  
 
 We want an approach that lets us be certain that we're moving in the right direction with every change.  Also, we want to know how much of a **change** to make to minimize RSS.  
 
@@ -124,7 +124,7 @@ Our new task is to find step sizes that bring us to the best RSS quickly without
 
 Believe it or not, we can determine the proper step size just by looking at the slope of our cost function.
 
-Imagine yourself standing on our cost curve like a skateboarder at the top of a halfpipe.  Even with your eyes closed, you could tell simply *by the way you tilted* whether to move forwards or backwards to approach the bottom of the cost curve.  
+Imagine yourself standing on our cost curve like a skateboarder at the top of a halfpipe.  Even with your eyes closed, you could tell simply *by the way you tilted* whether to move forward or backward to approach the bottom of the cost curve.  
 
 ![](./images/skateboard.png)
 
@@ -132,7 +132,7 @@ Imagine yourself standing on our cost curve like a skateboarder at the top of a 
 * And if the slope tilts upwards, then we should point walk backwards to approach the minimum.  
 * The steeper the tilt, the further away we are from our cost curve's minimum, so we should take a larger step.  
 
-So by looking to the tilt of a cost curve at a given point, we can discover the direction of our next step and how large of step to take.  The beauty of this, is that as our regression lines become more complicated, we need not plot all of the values of our regression line.  We can see the next variation of the regression line to study simply by looking at the slope of the cost curve.
+So by looking to the tilt of a cost curve at a given point, we can discover the direction of our next step and how large of step to take.  The beauty of this is that as our regression lines become more complicated, we need not plot all of the values of our regression line.  We can see the next variation of the regression line to study simply by looking at the slope of the cost curve.
 
 To demonstrate this, let's look at our cost function. By adding the slopes at some of the points on the curve, we can get a sense of the direction and magnitude of change required to alter our linear regression slope $m$ in the next iteration.
 
@@ -211,6 +211,6 @@ This technique is pretty magical.  By looking at the tangent line at each point,
 
 ## Summary
 
-We started this section with saying that we wanted a technique to find a $m$ value that would minimize our RSS, given a value of $b$.  We did not want to simply try all of the values of $m$ as doing so would be inefficient.  Instead, we went with the approach of gradient descent, where we try variations of regression lines iteratively changing our $m$ variable and assessing our RSS to see if we are making progress.
+We started this section by saying that we wanted a technique to find a $m$ value that would minimize our RSS, given a value of $b$.  We did not want to simply try all of the values of $m$ as doing so would be inefficient.  Instead, we went with the approach of gradient descent, where we try variations of regression lines iteratively changing our $m$ variable and assessing our RSS to see if we are making progress.
 
 In this lesson, we focused in on how to know which direction to alter a given variable, $m$ or $b$, as well as a technique for determining the size of the change to apply to one of our variables.  We used the line tangent to our cost curve at a given point to indicate the direction and size of the update to $m$.  The further away, the steeper the curve and thus the larger the step we would want to take.  Appropriately, our tangent line slope would have us take a larger step.  And the closer we are to the ideal $b$ value, the flatter the tangent line to the curve, and the smaller a step we would take. 
