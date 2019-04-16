@@ -77,7 +77,7 @@ At this point, our problem of finding the minimum RSS may seem simple.  For exam
 
 So far, we have held one variable, the y-intercept, constant in order to experiment with the other. We need an approach that will continue to work as we change both of the variables in our regression line.  Altering the second variable makes things far more complicated.  Here is a quick look at our cost curve if we can change both our slope value $m$ *and* the y-intercept:
 
-![](./gradientdescent.png)
+![](./images/gradientdescent.png)
 
 As we can see, exploring both variables, the slope and the y-intercept, requires plotting the second variable along the horizontal axis and turning our graph into a three-dimensional representation.  And in the future we'll be able to change more than just that.  
 
@@ -118,7 +118,7 @@ We want an approach that lets us be certain that we're moving in the right direc
 
 Our new task is to find step sizes that bring us to the best RSS quickly without overshooting the mark.
 
-![](https://bossip.files.wordpress.com/2014/11/aden-and-cree-580x435.jpg)
+![](./images/aden-and-cree.jpg)
 
 ### The slope of the cost curve tells us our step size
 
@@ -126,7 +126,7 @@ Believe it or not, we can determine the proper step size just by looking at the 
 
 Imagine yourself standing on our cost curve like a skateboarder at the top of a halfpipe.  Even with your eyes closed, you could tell simply *by the way you tilted* whether to move forwards or backwards to approach the bottom of the cost curve.  
 
-![](./skateboard.png)
+![](./images/skateboard.png)
 
 * If the slope tilts downwards, then we should walk forward to approach the minimum.  
 * And if the slope tilts upwards, then we should point walk backwards to approach the minimum.  
