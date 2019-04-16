@@ -38,7 +38,7 @@ plt.xlabel("x", fontsize=14)
 plt.ylabel("y", fontsize=14);
 ```
 
-In our cost function below, you can see the sequential values of $b$ and the related RSS values (given a constant value $m$).
+In our cost function below, you can see the sequential values of $m$ and the related RSS values (given a constant value $b$).
 
 
 ```python
