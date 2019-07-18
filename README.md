@@ -77,7 +77,7 @@ At this point, our problem of finding the minimum RSS may seem simple.  For exam
 
 So far, we have held one variable, the y-intercept, constant in order to experiment with the other. We need an approach that will continue to work as we change both of the variables in our regression line.  Altering the second variable makes things far more complicated.  Here is a quick look at our cost curve if we can change both our slope value $m$ *and* the y-intercept:
 
-![](./images/gradientdescent.png)
+<img src="./images/new_gradientdescent.png" width="600">
 
 As we can see, exploring both variables (the slope and the y-intercept) requires plotting the second variable along the horizontal axis and turning our graph into a three-dimensional representation.  And in the future, we'll be able to change more than just that.  
 
@@ -126,7 +126,7 @@ Believe it or not, we can determine the proper step size just by looking at the 
 
 Imagine yourself standing on our cost curve like a skateboarder at the top of a halfpipe.  Even with your eyes closed, you could tell simply *by the way you tilted* whether to move forward or backward to approach the bottom of the cost curve.  
 
-![](./images/skateboard.png)
+<img src="./images/snowboard.png" width="600">
 
 * If the slope tilts downwards, then we should walk forward to approach the minimum.  
 * And if the slope tilts upwards, then we should point walk backwards to approach the minimum.  
