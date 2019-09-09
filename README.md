@@ -21,6 +21,7 @@ In the last lesson, we quantified the accuracy of the regression line by squarin
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+%matplotlib inline 
 
 def regression_formula(x):
     return 1.319 + 52*x
