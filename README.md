@@ -9,8 +9,10 @@ In the last section, you took a first look at the process for improving regressi
 
 You will be able to:
 
-- Understand how to efficiently move towards the minimum of a curve
-- Understand what gradient descent means
+- Define step sizes in the context of gradient descent
+
+- Define a learning rate, and its relationship to step size when performing gradient descent
+- Plot visualizations of the process of gradient descent
 
 
 ## The best fit
@@ -38,6 +40,10 @@ plt.plot(x, regression_formula(x), '-')
 plt.xlabel("x", fontsize=14)
 plt.ylabel("y", fontsize=14);
 ```
+
+
+![png](index_files/index_3_0.png)
+
 
 In our cost function below, you can see the sequential values of $m$ and the related RSS values (given a constant value $b$).
 
@@ -76,7 +82,7 @@ plt.title("RSS with changes to slope", fontsize=16);
 
 At this point, our problem of finding the minimum RSS may seem simple.  For example, why not simply try **all** of the different values for the slope, and find the value where RSS is the lowest? 
 
-So far, we have held one variable, the y-intercept, constant in order to experiment with the other. We need an approach that will continue to work as we change both of the variables in our regression line.  Altering the second variable makes things far more complicated.  Here is a quick look at our cost curve if we can change both our slope value $m$ *and* the y-intercept:
+So far, we have held one variable, the y-intercept, constant in order to experiment with the other. We need an approach that will continue to work as we change both of the variables in our regression line.  Altering the second variable makes things far more complicated.  Here is a quick look at our cost curve if we can change both our slope value $m$ *and* the y-intercept $b$:
 
 <img src="./images/new_gradientdescent.png" width="600">
 
